@@ -1,0 +1,68 @@
+spring:
+  application:
+    name: LMS.BaseClass
+  main:
+    allow-circular-references: true
+    properties:
+           hibernate:
+              dialect : org.hibernate.dialect.MySQL5Dialect
+              show_sql : true
+              current_session_context_class:  org.springframework.orm.hibernate5.SpringSessionContext
+
+management.endpoints.web.exposure.include: '*'
+management.endpoint.health.show-details: always
+management.health.circuitbreakers.enabled: true
+ 
+resilience4j.bulkhead:
+  instances:
+    lms:
+        
+           maxWaitDuration: 100ms
+           maxConcurrentCalls: 10
+
+resilience4j.timelimiter:
+  instances:
+    lms:
+      timeoutDuration: 3s
+      cancelRunningFuture: true
+    someOtherService:
+      timeoutDuration: 1s
+      cancelRunningFuture: false
+resilience4j.retry:
+  instances:
+    lms:
+      maxRetryAttempts: 3
+      waitDuration: 5s
+      retryExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+      ignoreExceptions:
+        - org.springframework.web.client.HttpClientErrorException
+    someOtherService:
+      maxRetryAttempts: 3
+      waitDuration: 10s
+      retryExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+        - java.io.IOException
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowType: COUNT_BASED
+      slidingWindowSize: 100
+      permittedNumberOfCallsInHalfOpenState: 10
+      waitDurationInOpenState: 10
+      failureRateThreshold: 60
+      recordExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+  instances:
+    lms:
+      baseConfig: default
+    someOtherService:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 1
+      slidingWindowType: TIME_BASED
+      minimumNumberOfCalls: 20
+      waitDurationInOpenState: 50s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 10
+       

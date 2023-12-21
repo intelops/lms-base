@@ -1,0 +1,127 @@
+{"properties": [
+  {
+    "name": "server.main",
+    "type": "java.lang.String",
+    "description": "A description for 'server.main'"
+  },
+  {
+    "name": "spring.main.main",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.main.main'"
+  },
+  {
+    "name": "spring.main.properties.hibernate.dialect",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.main.properties.hibernate.dialect'"
+  },
+  {
+    "name": "spring.main.properties.hibernate.show_sql",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.main.properties.hibernate.show_sql'"
+  },
+  {
+    "name": "spring.main.properties.hibernate.current_session_context_class",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.main.properties.hibernate.current_session_context_class'"
+  },
+  {
+    "name": "amazonProperties.endpoint-url",
+    "type": "java.lang.String",
+    "description": "A description for 'amazonProperties.endpoint-url'"
+  },
+  {
+    "name": "amazonProperties.accessKey",
+    "type": "java.lang.String",
+    "description": "A description for 'amazonProperties.accessKey'"
+  },
+  {
+    "name": "amazonProperties.secretKey",
+    "type": "java.lang.String",
+    "description": "A description for 'amazonProperties.secretKey'"
+  },
+  {
+    "name": "amazonProperties.bucketName",
+    "type": "java.lang.String",
+    "description": "A description for 'amazonProperties.bucketName'"
+  },
+  {
+    "name": "STRIPE_PUBLIC_KEY",
+    "type": "java.lang.String",
+    "description": "A description for 'STRIPE_PUBLIC_KEY'"
+  },
+  {
+    "name": "baseURL",
+    "type": "java.lang.String",
+    "description": "A description for 'baseURL'"
+  },
+  {
+    "name": "STRIPE_SECRET_KEY",
+    "type": "java.lang.String",
+    "description": "A description for 'STRIPE_SECRET_KEY'"
+  },
+  {
+    "name": "baseURL",
+    "type": "java.lang.String",
+    "description": "A description for 'baseURL'"
+  },
+  {
+    "name": "baseURL",
+    "type": "java.lang.String",
+    "description": "A description for 'baseURL'"
+  },
+  {
+    "name": "BASE_URL",
+    "type": "java.lang.String",
+    "description": "A description for 'BASE_URL'"
+  },
+  {
+    "name": "eureka.allow-circular-references",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.allow-circular-references'"
+  },
+  {
+    "name": "eureka.main",
+    "type": "java.lang.String",
+    "description": "A description for 'eureka.main'"
+  },
+  {
+    "name": "main",
+    "type": "java.lang.String",
+    "description": "A description for 'main'"
+  },
+  {
+    "name": "amazonProperties.main",
+    "type": "java.lang.String",
+    "description": "A description for 'amazonProperties.main'"
+  },
+  {
+    "name": "amazonProperties.allow-circular-references",
+    "type": "java.lang.String",
+    "description": "A description for 'amazonProperties.allow-circular-references'"
+  },
+  {
+    "name": "twilioProperties.account-sID",
+    "type": "java.lang.String",
+    "description": "A description for 'twilioProperties.account-sID'"
+  },
+  {
+    "name": "twilioProperties.accountAuthToken",
+    "type": "java.lang.String",
+    "description": "A description for 'twilioProperties.accountAuthToken'"
+  },
+  {
+    "name": "twilioProperties.sendgrid.api.key",
+    "type": "java.lang.String",
+    "description": "A description for 'twilioProperties.sendgrid.api.key'"
+  },
+  {
+    "name": "twilioProperties.twilloSenderNumber",
+    "type": "java.lang.String",
+    "description": "A description for 'twilioProperties.twilloSenderNumber'"
+  },
+  {
+    "name": "environment",
+    "type": "java.lang.String",
+    "description": "A description for 'environment'"
+  }
+]}
